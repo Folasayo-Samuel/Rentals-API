@@ -27,7 +27,7 @@ function validate(req) {
     password: Joi.string().min(5).max(1024).required(),
   };
 
-  return Joi.validate(user, schema);
+  return Joi.validate(req, schema);
 }
 
 module.exports = router;
